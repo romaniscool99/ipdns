@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPdns</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #66bb6a;
+            transform: scale(1.1);
+        }
+
+        #second-button {
+            background-color: #f39c12;
+        }
+
+        #second-button:hover {
+            background-color: #f1c40f;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Welcome to IPdns</h1>
+
+        <!-- First Button: Go to IP page -->
+        <button onclick="window.location.href='api.html'">Search IP</button>
+
+        <!-- Second Button: Alert then go to another page -->
+        <button id="second-button" onclick="goToAnotherPage()">Search MAC</button>
+    </div>
+
+    <script>
+        function goToAnotherPage() {
+            alert("WARNING: this may be incorrect because most device use ipv4 address's so this might show the same result as Search IP because your device isnt compatable with our ipv6 searcher.");
+            window.location.href = 'mac.html';
+        }
+    </script>
+</body>
+</html>
