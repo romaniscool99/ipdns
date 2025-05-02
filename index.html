@@ -60,8 +60,25 @@
     </div>
 
     <script>
+        window.onload = function () {
+            // Check if the intro alerts have already been shown
+            if (!localStorage.getItem('introShown')) {
+                alert("hello everyone");
+                alert("the following will only show up once so watch closely");
+                alert("im roman");
+                alert("and i made this site for some cyber security thing");
+                alert("if you know me irl you know what i mean.");
+                alert("anyhoo enjoy my site!");
+
+                // Set flag in localStorage to prevent showing again
+                localStorage.setItem('introShown', 'true');
+            }
+        };
+
         function goToAnotherPage() {
             alert("WARNING: this may be incorrect because most device use ipv4 address's so this might show the same result as Search IP because your device isnt compatable with our ipv6 searcher.");
+            alert("this is a ipv6 searcher i made, very crappy because almost everyone uses ipv4");
+            alert("but idc go have fun.");
             window.location.href = 'mac.html';
         }
     </script>
